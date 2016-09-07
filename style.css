@@ -1,7 +1,10 @@
 /*-------------------------
 	Simple reset
 --------------------------*/
-.logo {height: 15%}
+#logo {height: 20px;} 
+#logo img {display: inline-block;
+    height: 350%;}
+
 
 *{
 	margin:0;
@@ -79,7 +82,7 @@ nav.contact .contact{
 }
 
 p{
-	font-s
+	
 	color:#7d9098;
 }
 
