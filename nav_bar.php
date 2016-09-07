@@ -11,7 +11,9 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="logo"><p>  to add some beautiful pic and text: logo</p></div>
+    <div class="logo">  
+        <img src="resource/img/logo1.jpg" height="100px">
+        <img src="./resource/img/big_logo1.png" ></div>
 <div class="main">    
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
@@ -21,7 +23,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">SomeLogo</a>
+            <a class="navbar-brand" href="#">
+                <img src="./resource/img/a.png" 
+                     style="height: inherit; display: inline-block; margin-top: -15px"> </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
