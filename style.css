@@ -40,7 +40,9 @@ section, footer, header, aside, nav{
 /*-------------------------
 	The menu
 --------------------------*/
-
+.dropdown-menu {
+    background-color:gray;
+}
 
 nav{
 	display:inline-block;
