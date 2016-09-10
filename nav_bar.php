@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<img src="../../../../Users/izyan/AppData/Local/Temp/big_logo1.png" alt=""/>
   <title>SSA</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,18 +31,10 @@
                 <img src="./resource/img/a.png" 
                      style="height: inherit; display: inline-block; margin-top: -15px"> </a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-<!--            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Page 1-1</a></li>
-                <li><a href="#">Page 1-2</a></li>
-                <li><a href="#">Page 1-3</a></li>
-              </ul>
-            </li>
-            -->
+       <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav" >
+              <li><a href="#">Home </a></li>
+
             <li><a href="#">Football</a></li>
             <li><a href="#">Basketball</a></li>
             <li><a href="#">Volleyball</a></li>

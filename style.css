@@ -68,6 +68,11 @@ nav a{
 	transition:background-color 0.25s;
 }
 
+#myNavbar ul li a:hover {
+    background-color:blueviolet; 
+    
+}
+
 nav a:first-child{
 	border-radius:2px 0 0 2px;
 }
