@@ -13,7 +13,7 @@
 </head>
 <body>
 <div id="logo">  
-    <img src="./resource/img/logo1.jpg" >
+    <img src="./resource/img/logo1.jpg"  >
     
     <img src="./resource/img/big_logo1.png" id="long_logo">
 </div>
@@ -32,7 +32,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <!--<li class="active"><a href="#">Home</a></li>-->
 <!--            <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
               <ul class="dropdown-menu">
