@@ -17,7 +17,7 @@
     
     <img src="./resource/img/big_logo1.png" id="long_logo">
 </div>
-<div class="main">    
+<div  class="main" >    
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -37,7 +37,7 @@
                  <img src="./resource/img/a.png" 
                       style="height: inherit; display: inline-block; margin-top: -15px ;"> </a> 
             </li>
-            <li><a class="navbar-brand" href="#"> Home </a></li>
+            <!--<li><a class="navbar-brand" href="#"> Home </a></li>-->
             <li><a href="#">Football</a></li>
             <li><a href="#">Basketball</a></li>
             <li><a href="#">Volleyball</a></li>
@@ -61,12 +61,19 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container my1">
       <h3>Collapsible Navbar</h3>
       <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
       <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+            <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+      <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+            <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+      <p>Only when the button is clicked, the navigation bar will be displayed.</p>
     </div>
 </div>
+    <div class='footer'>
+        this is footer
+    </div>
 </body>
 </html>
 
