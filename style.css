@@ -83,20 +83,34 @@ body{
 }
 
 .box{
-    margin: 0 auto;   
-}
-.bordered{border-style: solid;
-    border-width: 1px;
+    margin: 20px auto;  
+
 }
 
 .description {width: 700px;
-    min-height: 300px;
+    min-height: 200px;
     background-color: #77d2cd;
     border-color: darkcyan;
+    
 }
+.bordered{border-style: solid;
+          border-radius: 10px;
+          border-width: 1px;
+          box-shadow: 2px 2px 15px #204d74;
+}
+.bordered1{border-style: solid;
+        border-radius: 10px;
+        border-width: 1px;
+        box-shadow: 2px 2px 15px #204d74;
+        min-height: 200px;
+        margin-right:10px;
+}
+
+
 .shedule{
          background-color: #ce9dc1;
          border-color: darkorchid;
+
 }
 .teams{
     background-color: rgba(194, 204, 14, 0.44);
@@ -105,5 +119,9 @@ body{
 .registr{
     background-color: rgba(9, 206, 58, 0.5);
 }
-    
+
+a div{color: black;}
+table {font-size: 16px;}
+table,tbody,thead {border-color: #0f0f0f;}
+td {border-color: black;}
 
