@@ -19,7 +19,14 @@ body{
         /*background-image: url("img/b2.jpg") ;*/
         /*background-size:cover ;*/
 }
-
+.football{
+    width: 100%; min-width: 100%; min-height: 80%;
+    background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url('resource/img/football/1.jpg');
+    background-position:top center ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+}
 .my1{width: 100%; min-width: 100%; min-height: 85%;
      margin: 0; padding: 0;
       position: absolute; 
@@ -121,7 +128,12 @@ body{
 }
 
 a div{color: black;}
-table {font-size: 16px;}
-table,tbody,thead {border-color: #0f0f0f;}
-td {border-color: black;}
+table {font-size: 16px;
+    margin-top: 10px;}
 
+.table td{
+    border: indigo solid 1px !important;
+}
+.table th{
+    border: indigo solid 1px !important;
+}
