@@ -59,7 +59,10 @@
                     <tbody>
                         <?php while ($teams = mysqli_fetch_assoc($row)): ?>
                         <tr>
-                            <td><a href="#"><?php echo $teams['team_name'] ?></a></td>
+                            <td><a data-toggle="modal" data-keyboard="true" href="#" 
+                                   onclick="teamModal(<?php echo $teams['team_name'] ?>)"><?php echo $teams['team_name'] ?>
+                                </a>
+                            </td>
                            <td><?= $teams['captain_name'] ?></td>
                            <td><?= $teams['num'] ?> </td>
                        </tr> 
@@ -69,8 +72,28 @@
                 </table>
             </div>
         <!--</a>-->
-
-        <div class=" col-lg-1  col-md-1">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!--End Of Modal -->
+    <div class=" col-lg-1  col-md-1">
         </div>
         <a  href="#">
             <div class="registr col-lg-3 col-md-3 col-sx-4 bordered1">
