@@ -57,19 +57,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php while ($teams = mysqli_fetch_assoc($row)): ?>
+                        <?php // while ($teams = mysqli_fetch_assoc($row)): ?>
+                        <?php foreach( $team_array as $team){
+                            $query2="SELECT * FROM players WHERE team_name='$team'";
+                            $row1= mysqli_query($db, $query2); 
+                            $qq=mysqli_fetch_assoc($row1);
+                            ?>
                         <tr>
                             <td><a data-toggle="modal" data-keyboard="true" href="#" 
-                                   onclick="teamModal()"><?php echo $teams['team_name'] ?>
+                                   onclick="teamModal()"><?php echo $team ?>
                                 </a>
                                 <button class="btn btn-sm btn-success" 
-                                   onclick="teamModal1('<?php echo $teams['team_name'] ?>')"><?php echo $teams['team_name'] ?> 
+                                   onclick="teamModal1('<?php echo $team ?>')"><?php echo $team ?> 
                                 </button>
                             </td>
-                           <td><?= $teams['captain_name'] ?></td>
-                           <td><?= $teams['num'] ?> </td>
+                           <td><?php echo $qq['catain_name']  ?></td>
+                           <td><?php echo mysqli_num_rows($row1) ?> </td>
                        </tr> 
-                       <?php endwhile; ?>
+                        <?php } ?>
+                       <?php // endwhile; ?>
                     </tbody>
 
                 </table>
