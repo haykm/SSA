@@ -137,3 +137,4 @@ table {font-size: 16px;
 .table th{
     border: indigo solid 1px !important;
 }
+thead th{text-align:   center;}

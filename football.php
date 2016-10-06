@@ -52,7 +52,7 @@
                     <thead>
                         <tr>
                             <th>TeamName</th>
-                            <th>CaptainName</th>
+                            <th title="Captain Name">C</th>
                             <th title="Number Of Players" >N</th>
                         </tr>
                     </thead>
@@ -65,10 +65,10 @@
                             ?>
                         <tr>
                             <td><a data-toggle="modal" data-keyboard="true" href="#" 
-                                   onclick="teamModal()"><?php echo $team ?>
+                                   onclick="teamModal1('<?php echo $team ?>')"><?php echo $team ?>
                                 </a>
-                                <button class="btn btn-sm btn-success" 
-                                   onclick="teamModal1('<?php echo $team ?>')"><?php echo $team ?> 
+                                <button class="btn btn-xs btn-success" 
+                                   onclick="teamModal1('<?php echo $team ?>')">Details 
                                 </button>
                             </td>
                            <td><?php echo $qq['catain_name']  ?></td>
@@ -86,34 +86,8 @@
     </div>
         
         <div class="registr col-lg-3 col-md-3 col-sx-4 bordered1">
-            <table class="table-bordered table table-condensed ">
-                <thead>
-                    <tr>
-                        <th>TeamName</th>
-                        <th>CaptainName</th>
-                        <th title="Number Of Players" >N</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                        foreach( $team_array as $team){
-                            $query2="SELECT * FROM players WHERE team_name='$team'";
-                            $row1= mysqli_query($db, $query2);
-//                                while($team_player=mysqli_fetch_assoc($row1)){
-//                                    echo $team_player['l_name']; echo '<br>';
-//                                }
-                             $qq=mysqli_fetch_assoc($row1);
-                            echo "<tr> "
-                            . "<td><a href='#'>" . $team . "</a></td>"
-                                . "<td>" . $qq['catain_name']
-                                . "</td>"
-                                . "<td>" . mysqli_num_rows($row1) . "</td>"
-                                . "</tr>";
-//                                echo mysqli_num_rows($row1);
-                        }
-                    ?>
-                </tbody>
-            </table>
+            register your team
+
        </div>
         
             <div class=" col-lg-1 col-md-1 ">

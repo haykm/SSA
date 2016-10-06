@@ -3,8 +3,8 @@ $db = mysqli_connect('localhost', 'haykm', '', 'ssa_db');
 $post_team = $_POST['team'];
 //$team="$post_team";
 echo $team;
-//$team_query="SELECT * FROM players WHERE team_name='$team'";
-
+$team_query="SELECT * FROM players WHERE team_name='$post_team'";
+$team_row=  mysqli_query($db,$team_query);
 ?>
 
 
@@ -17,10 +17,29 @@ echo $team;
       <div class="modal-content">
         <div class="modal-header">
           <button class="close" type="button" onclick="close_modal();" aria-label="Close" >&times;</button>
-          <h4 class="modal-title">Modal Header <?php echo $post_team; ?></h4>
+          <h2 class="modal-title"> <?php echo strtoupper($post_team); ?></h2>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+            
+            <table class="table-bordered table table-condensed ">
+                <thead >
+                    <tr>
+                        <th>PlayerName</th>
+                        <th>SomeBlank</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($team_name=mysqli_fetch_assoc($team_row)):  ?>
+                    <tr>
+                        <td><?php echo $team_name['f_name'] . ' ' . $team_name['l_name'] ?></td>
+                        <td></td>
+                    </tr>
+                    <?php endwhile ; ?>
+                </tbody>
+            </table>
+            <p> </p><br
+            
+          
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" onclick="close_modal();">Close</button>
