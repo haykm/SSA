@@ -29,6 +29,27 @@
              alert ("Hello! I am an alert box!!");
 
         }
+        function loginModal() {
+//            alert (team);
+            var data = {"team" : team, };
+            jQuery.ajax({
+                    url : 'login.php',
+                    method : "post",
+                    // If you inspect the network for form you'll see there is form data
+                    // That contains our team
+                    data : data,
+                    success: function(data) {
+//                        alert (team);
+                        jQuery('body').append(data);
+                        // We can now toggle the modal because its in the body
+                        jQuery('#loginModal').modal('toggle');
+                    },
+                    error: function() {
+                            alert("Something went wrong!");
+                    }
+            });
+        }
+
     </script>
                 
 </body>

@@ -21,7 +21,7 @@ $team_row=  mysqli_query($db,$team_query);
         </div>
         <div class="modal-body">
             
-            <table class="table-bordered table table-condensed ">
+            <table class="table-bordered table table-condensed table-striped table-auto">
                 <thead >
                     <tr>
                         <th>PlayerName</th>

@@ -138,3 +138,4 @@ table {font-size: 16px;
     border: indigo solid 1px !important;
 }
 thead th{text-align:   center;}
+.table-auto{width:auto;}
