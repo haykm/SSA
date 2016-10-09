@@ -30,16 +30,16 @@
 
         }
         function loginModal() {
-//            alert (team);
-            var data = {"team" : team, };
+//            alert ("team");
+//            var data = {"team" : "team", };
             jQuery.ajax({
                     url : 'login.php',
                     method : "post",
                     // If you inspect the network for form you'll see there is form data
                     // That contains our team
-                    data : data,
+//                    data : data,
                     success: function(data) {
-//                        alert (team);
+//                        alert ("team1");
                         jQuery('body').append(data);
                         // We can now toggle the modal because its in the body
                         jQuery('#loginModal').modal('toggle');
