@@ -33,7 +33,7 @@
 //            alert ("team");
 //            var data = {"team" : "team", };
             jQuery.ajax({
-                    url : 'login.php',
+                    url : 'login_modal.php',
                     method : "post",
                     // If you inspect the network for form you'll see there is form data
                     // That contains our team
@@ -43,6 +43,26 @@
                         jQuery('body').append(data);
                         // We can now toggle the modal because its in the body
                         jQuery('#loginModal').modal('toggle');
+                    },
+                    error: function() {
+                            alert("Something went wrong!");
+                    }
+            });
+        }
+        function registerModal() {
+//            alert ("team");
+//            var data = {"team" : "team", };
+            jQuery.ajax({
+                    url : 'register.php',
+                    method : "post",
+                    // If you inspect the network for form you'll see there is form data
+                    // That contains our team
+//                    data : data,
+                    success: function(data) {
+//                        alert ("team1");
+                        jQuery('body').append(data);
+                        // We can now toggle the modal because its in the body
+                        jQuery('#registerModal').modal('toggle');
                     },
                     error: function() {
                             alert("Something went wrong!");

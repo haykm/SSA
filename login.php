@@ -1,56 +1,23 @@
+<?php 
+    $db = mysqli_connect('localhost', 'haykm', '', 'ssa_db');
+    if (isset($_POST['login'])){
+        $uname=$_POST['uname'];
+        $pass=md5($_POST['password']) ;
+//        $pass=$_POST['password'];
+//        echo $uname;
+        $check_user_query="SELECT * FROM capt WHERE uname='$uname' && passw='$pass' ";
+        $check_user_row=  mysqli_query($db,$check_user_query);
+        if (mysqli_num_rows($check_user_row)>0) {
+//            echo 'welcome';
+            $_SESSION['user']=$uname;
+//            echo '_SESSION_user='.$_SESSION['user']."a";
+            header("Location: ./index.php");
+        } else {echo "U or P is not correct";}
+    } elseif ($_POST['logout']) {
+//        unset($_SESSION['user']);
+//        session_destroy();
+//        header("Location: ./index.php");
+    }
+        
 
-
-
-<?php ob_start(); ?>
-  <!-- Modal -->
-  <div class="modal fade" id="loginModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <!--<div class="modal-content">-->
-<!--        <div class="modal-header">
-          <button class="close" type="button" onclick="close_modal();" aria-label="Close" >&times;</button>
-          <h2 class="modal-title"> LogIn</h2>
-        </div>-->
-<!--        <div class="modal-body">-->
-        <div class="container">
-            <section id="content">
-                <button class="close" type="button" onclick="close_modal();" aria-label="Close" >&times;</button>
-                <form action="">
-                    
-                        <h1>Login Form</h1>
-                        
-                        <div>
-                                <input type="text" placeholder="Username" required="" id="username" />
-                        </div>
-                        <div>
-                                <input type="password" placeholder="Password" required="" id="password" />
-                        </div>
-                        <div>
-                                <input type="submit" value="Log in" />
-                                <a href="#">Lost your password?</a>
-                                <a href="#">Register</a>
-                        </div>
-                </form><!-- form -->
-            </section>
-        </div>
-        <!--</div>-->
-<!--        <div class="modal-footer">
-          <button type="button" class="btn btn-default" onclick="close_modal();">Close</button>
-        </div>-->
-      <!--</div>-->
-      
-    </div>
-  </div>
-  <!--End Of Modal -->
-  	<script>
-	
-		function close_modal() {
-			jQuery('#loginModal').modal('hide'); 
-			setTimeout(function() {
-				
-				jQuery('#loginModal').remove();
-			},500);
-		}
-	</script>
-<?php echo ob_get_clean(); ?>
+?>

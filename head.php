@@ -1,5 +1,10 @@
-<?php?>
+<?php 
+ 
+//    $_SESSION['user']='';
+//    unset($_SESSION['user']);
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <title>SSA</title>
@@ -13,4 +18,8 @@
   
 </head>
 <body>
-
+<?php 
+session_start();
+    foreach ($_SESSION as $key=>$val)
+    echo $key." =".$val."<br/>";
+?>

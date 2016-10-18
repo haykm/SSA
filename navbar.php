@@ -1,4 +1,11 @@
 <?php
+    if(isset($_SESSION['user'])){
+        $ha=1;
+        $captain=$_SESSION['user'];
+    }  else {
+        $ha=0;
+    }
+    echo $ha." "."ses_u=".$_SESSION['user']." ".$captain;
 ?>
 <div  class="" >    
     <nav class="navbar navbar-inverse">
@@ -16,7 +23,7 @@
        <div class="collapse navbar-collapse" id="myNavbar">
 
            <ul class="nav navbar-nav " >
-               <li><a class="active navbar-brand" href="nav_bar.php">
+               <li><a class="active navbar-brand" href="index.php">
                  <img src="./resource/img/a.png" 
                       style="height: inherit; display: inline-block; margin-top: -15px ;"> </a> 
                 </li>
@@ -36,7 +43,9 @@
                 </li>
            </ul>
             <ul  class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li <?php if($ha==1) {echo "class='hidden'";} ?> ><a data-toggle="modal" data-keyboard="true" href="#" 
+                       onclick="registerModal()">
+                        <span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
                 <li><a data-toggle="modal" data-keyboard="true" href="#" 
                        onclick="loginModal()">
                         <span class="glyphicon glyphicon-log-in"></span> Login
