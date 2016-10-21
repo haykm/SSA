@@ -9,8 +9,12 @@
         $check_user_row=  mysqli_query($db,$check_user_query);
         if (mysqli_num_rows($check_user_row)>0) {
 //            echo 'welcome';
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+                
+            }
             $_SESSION['user']=$uname;
-//            echo '_SESSION_user='.$_SESSION['user']."a";
+//            echo '_SESSION_user='.$_SESSION['user']." a";
             header("Location: ./index.php");
         } else {echo "U or P is not correct";}
     } elseif ($_POST['logout']) {

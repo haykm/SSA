@@ -21,6 +21,7 @@
 //        echo $team_list['team_name'];
     }
 //    print_r($team_array);
+    echo "user is ".$_SESSION['user'];
     ?>
 
     
@@ -74,7 +75,7 @@
                            <td><?php echo $qq['catain_name']  ?></td>
                            <td><?php echo mysqli_num_rows($row1) ?> </td>
                        </tr> 
-                        <?php } ?>
+                        <?php } // end of foreach ; ?> 
                        <?php // endwhile; ?>
                     </tbody>
 

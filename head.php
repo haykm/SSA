@@ -19,7 +19,9 @@
 </head>
 <body>
 <?php 
-session_start();
-    foreach ($_SESSION as $key=>$val)
-    echo $key." =".$val."<br/>";
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+//    foreach ($_SESSION as $key=>$val)
+//    echo $key." =".$val."<br/>";
 ?>

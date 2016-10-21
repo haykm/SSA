@@ -5,7 +5,7 @@
     }  else {
         $ha=0;
     }
-    echo $ha." "."ses_u=".$_SESSION['user']." ".$captain;
+//    echo $ha." "."ses_u=".$_SESSION['user']." ".$captain;
 ?>
 <div  class="" >    
     <nav class="navbar navbar-inverse">
@@ -46,13 +46,16 @@
                 <li <?php if($ha==1) {echo "class='hidden'";} ?> ><a data-toggle="modal" data-keyboard="true" href="#" 
                        onclick="registerModal()">
                         <span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
-                <li><a data-toggle="modal" data-keyboard="true" href="#" 
-                       onclick="loginModal()">
-                        <span class="glyphicon glyphicon-log-in"></span> Login
+                        <li><a data-toggle="modal" data-keyboard="true" href="<?php if($ha==1){echo './logout.php';} else {
+        echo '#';} ?>" 
+                       onclick="<?php  if($ha==1){echo '';}
+                           else {echo 'loginModal()';}?>">
+                        <span class="glyphicon glyphicon-log-in"></span> <?php  if($ha==1){echo 'LogOut';}
+                           else {echo 'LogIn';}?>
                     </a>
                 </li>
             </ul>
-          </ul>
+          
 
         </div>
       </div>
