@@ -26,10 +26,18 @@
 
 //    print_r($team_array);
 //    echo "user is ".$_SESSION['user'];
-    if(isset($_SESSION['user'])){$capt=$_SESSION['user'];} else {$capt='no_user';}
+    if(isset($_SESSION['user'])){
+        $capt=$_SESSION['user'];
+//        $capt_name=
+    } else {$capt='no_user';}
+    
     while ($c=mysqli_fetch_assoc($capts_obj)){
-        if($c==$capt){$user=2;break;}  else {$user=1;}
+        if($c['capt_uname']==$capt){
+            $user=2;break;
+        }  
+        else {$user=1;}
     }
+    
     ?>
 
     
@@ -105,7 +113,7 @@
                 if($capt!='no_user'){
                     if($user==2){
                         echo 'you have already registrated team. Each patain could register only one team for each type of sport';
-                    }else{echo 'Now You can register your team. '.$user;}
+                    }else{echo 'Now You can <a href="./register_team.php">register </a>your team. ';}
                 }else {echo
                     "<p> Only captains can register a team. <br> If you are a captain, please log in as with your username to enable additional functions.
                     </p>

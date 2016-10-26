@@ -1,4 +1,4 @@
-#content form:after {
+x#content form:after {
 	content: ".";
 	display: block;
 	height: 0;
